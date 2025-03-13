@@ -1,8 +1,8 @@
-package com.acme.algorithms.recursion;
+package com.acme.algorithms.kfrequentelements;
 
 import java.util.*;
 
-public class KFrequentElements {
+public class TopKFrequentElements {
 
     public List<Map.Entry<Integer, Integer>> getKFrequentElements(int[] numbers, int k) {
 
@@ -69,7 +69,7 @@ public class KFrequentElements {
         int[] array = {8, 4, 3, 4, 8, 4};
         int k = 2;
 
-        KFrequentElements kFrequentElements = new KFrequentElements();
+        TopKFrequentElements kFrequentElements = new TopKFrequentElements();
 
         System.out.println("The solution is: ");
 
