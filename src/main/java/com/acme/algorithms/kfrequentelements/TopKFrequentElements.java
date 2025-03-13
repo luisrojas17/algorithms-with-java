@@ -2,6 +2,14 @@ package com.acme.algorithms.kfrequentelements;
 
 import java.util.*;
 
+/**
+ * This class implements the solution for the problem "Top K Frequent Elements".
+ * <br/>
+ * Directions:
+ * Given an array numbers[] and a positive integer k, the task is to find
+ * the k most frequently occurring elements from a given array.
+ *
+ */
 public class TopKFrequentElements {
 
     public List<Map.Entry<Integer, Integer>> getKFrequentElements(int[] numbers, int k) {
