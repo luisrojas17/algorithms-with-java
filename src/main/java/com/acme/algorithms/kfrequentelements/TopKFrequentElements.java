@@ -46,9 +46,10 @@ public class TopKFrequentElements {
 
         System.out.println("Map with occurrences: " + map);
 
-        // Sort map entries according its values
+        // Get all map entries
         List<Map.Entry<Integer, Integer>> entries = new ArrayList<>(map.entrySet());
 
+        // Sort map entries according its values
         Collections.sort(entries, new Comparator<Map.Entry<Integer, Integer>>() {
             @Override
             public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
@@ -58,8 +59,8 @@ public class TopKFrequentElements {
 
         System.out.println("Sorted map: " + entries);
 
+        // Get the items according to k number
         List<Map.Entry<Integer, Integer>> result = new ArrayList<>();
-        // We get the items according to k
         for (int i = 0; i < k; i++) {
             result.add(entries.get(i));
         }
