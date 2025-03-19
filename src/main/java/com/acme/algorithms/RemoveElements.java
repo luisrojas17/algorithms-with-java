@@ -65,18 +65,37 @@ public class RemoveElements {
 
         for (int  i = 0; i < nums.length; i++) {
 
+            // To change the value for default value to simulate remove it
             if (nums[i] == val) {
 
+                // [0, 1, 2, 2, 3, 0, 4, 2] -> [0,1,4,2,3,0,2,2]
+                //        i
+                // [0, 1, 4, 2, 3, 0, 2, 2] -> [0,1,4,0,3,0,2,2]
+                //           i
                 nums[i] = fakeValue;
+
+                // To indicate the numbers that are not equals to val.
                 result--;
 
+                // To iterate the array in reverse order and moving the current item to
+                // last position because the current item corresponds with value to remove
                 for (int j = (nums.length-1); j > i; j--) {
 
+                    // [0, 1, 2, 2, 3, 0, 4, 2] -> [0,1,4,2,3,0,2,2]
+                    //        i           j
+                    // [0, 1, 4, 2, 3, 0, 2, 2] -> [0,1,4,0,3,2,2,2]
+                    //           i     j
+                    // If last item is different to val and fakeValue
+                    // it will be changing the positions.
                     if (nums[j] != val && nums[j] != fakeValue) {
+
+                        // Save the last item's value.
                         tempValue = nums[j];
 
+                        // Move the item's value to remove at the end of the array.
                         nums[j] = nums[i];
 
+                        // Move the last item's value at the beginning of the array.
                         nums[i] = tempValue;
 
                         break;
