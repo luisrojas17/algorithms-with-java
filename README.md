@@ -1,2 +1,2 @@
 # algorithms-with-java
-This repository contains solutions for several com.acme.algorithms.
+This repository contains solutions for several algorithms.
