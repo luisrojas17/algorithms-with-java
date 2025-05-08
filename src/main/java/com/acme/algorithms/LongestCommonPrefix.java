@@ -5,19 +5,19 @@ import java.util.List;
 
 /**
  * Longest Common Prefix
- *
+ * <br/>
  * Example 1:
- *
+ * <br/>
  * Input: strs = ["flower","flow","flight"]
  * Output: "fl"
- *
+ * <br/>
  * Example 2:
- *
+ * <br/>
  * Input: strs = ["dog","racecar","car"]
  * Output: ""
  * Explanation: There is no common prefix among the input strings.
  */
-public class TestCommonStrings {
+public class LongestCommonPrefix {
 
     public static String test(List<String> inputList) {
         if (null == inputList || inputList.isEmpty()) {
@@ -42,7 +42,7 @@ public class TestCommonStrings {
         // We get the min length in order to iterate both strings and can get the longest common substring
         int minLength = Math.min(lengthFirst, lengthLast);
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for(int i = 0; i < minLength; i++) {
 
             if(first.charAt(i) == last.charAt(i)) {
@@ -56,17 +56,17 @@ public class TestCommonStrings {
     public static void main(String[] args) {
 
         List<String> inputs = Arrays.asList("flower", "flow", "flight");
-        String result = TestCommonStrings.test(inputs);
+        String result = LongestCommonPrefix.test(inputs);
 
         System.out.println("Result: "+ result);
 
         inputs = Arrays.asList("Mexico", "Mexico city");
-        result = TestCommonStrings.test(inputs);
+        result = LongestCommonPrefix.test(inputs);
 
         System.out.println("Result: " + result);
 
         inputs = Arrays.asList("Mexico", "Dog", "EU");
-        result = TestCommonStrings.test(inputs);
+        result = LongestCommonPrefix.test(inputs);
 
         System.out.println("Result: " + result);
 
